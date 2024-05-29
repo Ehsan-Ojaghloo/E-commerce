@@ -1,0 +1,20 @@
+@use "../theme/colors.scss" as *;
+
+@mixin display-flex-spaceB() {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-page-con {
+  padding: 25px;
+  width: 95%;
+  @include display-flex-spaceB();
+
+  .menu-icon,
+  .user-icon {
+    font-size: 2.2rem;
+    color: $white-color;
+  }
+}

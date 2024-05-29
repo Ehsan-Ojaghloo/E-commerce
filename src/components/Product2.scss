@@ -1,0 +1,48 @@
+@use "../theme/colors.scss" as *;
+@use "../base/fonts.scss" as *;
+
+@mixin display-flex-culumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-flex-spaceB() {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-selling-product {
+    @include display-flex-spaceB();
+    font-family: $font;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    width: 470px;
+    padding: 10px;
+    color: $white-color;
+    margin-top: 10px;
+
+    
+    svg {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .best-selling-product-info {
+        @include display-flex-culumn();
+
+        .price-tag {
+            color: $green-color;
+        }
+
+    }
+
+}

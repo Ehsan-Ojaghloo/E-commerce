@@ -1,0 +1,42 @@
+@use "../theme/colors.scss" as *;
+
+@mixin display-flex() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-con {
+    // border: 1px solid black;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+
+    .search-inner {
+        @include display-flex();
+        // gap: 10px;
+
+    .search-icon {
+        font-size: 2rem;
+        color: $white-color;
+    }
+
+    #search-panel {
+        border: none;
+        background: none;
+        outline: none;
+        width: 300px;
+        padding: 10px;
+        color: $white-color;
+    }
+
+    #search-panel::placeholder {
+        color: $white-color;
+    }
+
+  }
+
+
+}

@@ -2,19 +2,33 @@ import React , {useState , useEffect} from 'react'
 import "./ProductPage.scss"
 import Navbar from './components/Navbar'
 import Search from './components/Search'
-import { BsCart3 } from "react-icons/bs";
-import { AiOutlineProduct } from "react-icons/ai";
+// import Product from './components/Product'
+import { BsCart3 } from "react-icons/bs"
+import { AiOutlineProduct } from "react-icons/ai"
 
 function ProductPage() {
 
 
-    const [product, setProduct] = useState([]);
+  // const[weather , setWeather] = useState([]);
 
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setProduct(json))
-    }, [product])
+  fetch('https://api.openweathermap.org/data/2.5/weather?appid=582560638c1b004bd0c8a5cd5e2f7efa&q=alborz')
+        .then(res=>res.json())
+        .then(json=>console.log(json))
+
+  // useEffect(()=>{
+  //   fetch('https://api.openweathermap.org/data/2.5/weather?appid=582560638c1b004bd0c8a5cd5e2f7efa&q=tehran')
+  //       .then(res=>res.json())
+  //       .then(json=>console.log(json))
+  // }, [weather])
+
+
+    // const [product, setProduct] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('https://fakestoreapi.com/products?limit=4&sort=desc') // using "sort" and "limit"
+    //         .then(res=>res.json())
+    //         .then(json=>setProduct(json))
+    // }, [product])
 
 
   return (
@@ -34,6 +48,12 @@ function ProductPage() {
                         <h2>{productData.price}$</h2>
                     </div>
                   </div>
+
+                  // <Product 
+                  // imgSrc={productData.image} 
+                  // productName={productData.title} 
+                  // productPrice={productData.price} 
+                  // />
               ))}
         </div>
     </div>

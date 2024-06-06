@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Search from "./components/Search";
 import { BsCart3 } from "react-icons/bs";
+import { AiOutlineProduct } from "react-icons/ai";
 import Product from "./components/Product";
 import "./pages/App.scss";
 import Product2 from "./components/Product2";
@@ -11,7 +13,8 @@ function App() {
     <div className="app-con">
       <Navbar/>
       <div className="upper-part-con">
-        <Search/>
+        <Search />
+        <Link to="/link"> <AiOutlineProduct/> </Link>
         <BsCart3/>
       </div>
       <div className="products">

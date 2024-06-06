@@ -22,7 +22,7 @@
 
     .upper-part-con {
         @include display-flex();
-        gap: 25px;
+        gap: 14px;
 
         svg {
             color: $green-color;
